@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Home Tour</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    
+
+</head>
+<body>
+    <a-scene background="color:yellow">
+        <a-camera wasd-controls-enabled="true" position="0 8 20"></a-camera>
+        <a-assets>
+            <a-asset-item id="table-obj" src="./assets/table/tinker.obj">
+                <a-asset-item id="table-mtl" src="./assets/table/obj.mtl">
+                    <a-asset-item id="table-gltf" src="./assets/table/Epic Curcan.glb"></a-asset-item>
+                    <!--chair-->
+                    <a-asset-item id="chair-obj" src="./chair/tinker.obj"></a-asset-item>
+                    <a-asset-item id="chair-mtl" src="./chair/obj.mtl"></a-asset-item>
+                    <a-asset-item id="chair-gltf" src="./chair/Copy of chair.glb"></a-asset-item>
+                    <!--almirah-->
+                    <a-asset-item id="tinker-obj" src="./almirah/tinker.obj"></a-asset-item>
+                    <a-asset-item id="obj-mtl" src="./almirah/obj.mtl"></a-asset-item>
+
+        </a-assets>
+        <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+            color="white"> </a-circle>
+            <!--obj models-->
+            <a-entity obj-model="obj: #table-obj; mtl: #table-mtl" position="5 0 0" rotation="-90 -40 0" scale="0.1 0.1 0.1 ">
+                <!--chair obj model-->
+                <a-entity obj-model="obj: #chair-obj; mtl: #chair-mtl" position="10 0 0" rotation="0 90 0" scale="2 2 2">
+                <!--almirah obj model-->
+                <a-entity obj-model="obj: #tinker-obj; mtl: #obj-mtl" position="-100 -100 10" rotation="1 0 0" scale="1 1 1">
+            </a-entity>
+    </a-scene>
+</body>
+</html>
